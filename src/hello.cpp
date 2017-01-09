@@ -1,6 +1,7 @@
 #include <myproject/config.h>
-#include <stdio>
+#include <stdio.h>
 
+#ifdef REMOVE_THIS_BLOCK
 // Cpp-check sample from http://cppcheck.sourceforge.net/demo/
 void f1 (struct fred_t *p)
 {
@@ -9,6 +10,7 @@ void f1 (struct fred_t *p)
     if (p)
         do_something (x);
 }
+#endif
 
 int main ()
 {
