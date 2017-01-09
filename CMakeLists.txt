@@ -19,6 +19,13 @@ include_directories(include)
 
 add_subdirectory(src)
 
-set (CPPCHECK_EXTENSIONS cpp h)
-set (CPPCHECK_DIR src/)
+set (SRC_EXTENSIONS cpp h)
+set (SRC_DIRS src/ include/)
+
+set (CPPCHECK_EXTENSIONS ${SRC_EXTENSIONS})
+set (CPPCHECK_DIR ${SRC_DIRS})
 include(cmake/cppcheck.cmake)
+
+set (CLANG_FORMAT_EXTENSIONS ${SRC_EXTENSIONS})
+set (CLANG_FORMAT_DIR ${SRC_DIRS})
+include(cmake/clang-format.cmake)
